@@ -239,7 +239,7 @@ const FloristPortfolio = () => {
             className="bg-pink-200 hover:bg-pink-300 text-gray-800 font-medium px-12 py-3 
               rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
           >
-            GET STARTED!
+            MY WORK
           </button>
         </div>
       </section>
