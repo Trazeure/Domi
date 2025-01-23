@@ -1,18 +1,14 @@
-// App.jsx
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import FloristPortfolio from './components/FloristPortfolio'
-import WorkGallery from './components/WorkGallery'
+import { Routes, Route } from "react-router-dom";
+import FloristPortfolio from "./components/FloristPortfolio";
 
 function App() {
- return (
-   <main>
-     <Routes>
-       <Route path="/" element={<FloristPortfolio />} />
-       <Route path="/work" element={<WorkGallery />} />
-     </Routes>
-   </main>
- )
+  return (
+    <main>
+      <Routes>
+        <Route path="/" element={<FloristPortfolio />} />
+      </Routes>
+    </main>
+  );
 }
 
-export default App
+export default App;
