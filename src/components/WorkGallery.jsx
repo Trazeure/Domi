@@ -208,23 +208,28 @@ const WorkGallery = () => {
   
     return (
       <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-pink-50">
-        <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-pink-100">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center space-x-3">
-                <a href="/" className="flex items-center space-x-2 text-gray-600 hover:text-pink-400 transition-colors duration-300">
-                  <ArrowLeft className="w-6 h-6" />
-                  <span className="font-medium">Back</span>
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Flower2 className="w-8 h-8 text-pink-400" />
-                <span className="text-2xl font-serif text-gray-800">My Work</span>
-              </div>
-              <div className="w-20"></div>
-            </div>
-          </div>
-        </nav>
+ <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-pink-100">
+   <div className="max-w-7xl mx-auto px-4">
+     <div className="flex items-center justify-between h-16">
+       <div className="flex items-center space-x-3">
+         <Link 
+           to="/"
+           className="flex items-center space-x-2 text-gray-600 hover:text-pink-400 transition-colors duration-300"
+         >
+           <ArrowLeft className="w-6 h-6" />
+           <span className="font-medium">Back</span>
+         </Link>
+       </div>
+       <div className="flex items-center space-x-3">
+         <Flower2 className="w-8 h-8 text-pink-400" />
+         <span className="text-2xl font-serif text-gray-800">My Work</span>
+       </div>
+       <div className="w-20"></div>
+     </div>
+   </div>
+ </nav> 
+      
+
   
         <main className="pt-24 pb-16">
           <div className="max-w-7xl mx-auto mb-12">

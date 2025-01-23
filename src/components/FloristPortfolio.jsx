@@ -239,7 +239,7 @@ const FloristPortfolio = () => {
         {/* My Work Button with Link */}
         <div className="max-w-4xl mx-auto px-4 text-center mt-12">
           <Link 
-            to="/work"
+            to="/#/work"
             className="inline-block bg-pink-200 hover:bg-pink-300 text-gray-800 font-medium px-12 py-3 
               rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
           >
