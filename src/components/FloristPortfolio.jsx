@@ -107,21 +107,47 @@ const FloristPortfolio = () => {
     return () => observer.disconnect();
   }, []);
 
-  const workSections = {
-    funeral: {
-      title: 'Funeral Arrangements',
+const workSections = {
+    wrapped: {
+      title: 'Wrapped Roses',
       images: [
-        { id: 'funeral1', src: workImages.funeral1 },
-        { id: 'funeral2', src: workImages.funeral2 },
-        { id: 'funeral3', src: workImages.funeral3 },
+        { id: 'wrapped1', src: workImages.wrapped1 },
+        { id: 'wrapped2', src: workImages.wrapped2 },
+        { id: 'wrapped4', src: workImages.wrapped4 },
+        { id: 'wrapped5', src: workImages.wrapped5 },
+        { id: 'wrapped7', src: workImages.wrapped7 },
+        { id: 'wrapped9', src: workImages.wrapped9 },
+        { id: 'wrapped10', src: workImages.wrapped10 },
+        { id: 'wrapped11', src: workImages.wrapped11 },
+        { id: 'wrapped12', src: workImages.wrapped12 },
       ]
     },
-    gerbera: {
-      title: 'Gerbera',
+    vase: {
+      title: 'In Vase',
       images: [
-        { id: 'gerbera1', src: workImages.gerbera1 },
-        { id: 'gerbera2', src: workImages.gerbera2 },
-        { id: 'gerbera3', src: workImages.gerbera3 },
+        { id: 'vase1', src: workImages.vase1 },
+        { id: 'vase2', src: workImages.vase2 },
+        { id: 'vase3', src: workImages.vase3 },
+        { id: 'vase5', src: workImages.vase5 },
+      ]
+    },
+    box: {
+      title: 'In a Box',
+      images: [
+        { id: 'box2', src: workImages.box2 },
+        { id: 'box3', src: workImages.box3 },
+        { id: 'box4', src: workImages.box4 },
+        { id: 'box5', src: workImages.box5 },
+        { id: 'box6', src: workImages.box6 },
+        { id: 'box7', src: workImages.box7 },
+      ]
+    },
+    tulips: {
+      title: 'Tulips',
+      images: [
+        { id: 'tulip1', src: workImages.tulip1 },
+        { id: 'tulip2', src: workImages.tulip2 },
+        { id: 'tulip3', src: workImages.tulip3 },
       ]
     },
     happy: {
@@ -140,26 +166,12 @@ const FloristPortfolio = () => {
         { id: 'happy11', src: workImages.happy11 },
       ]
     },
-    box: {
-      title: 'In a Box',
+    more: {
+      title: 'More',
       images: [
-        { id: 'box1', src: workImages.box1 },
-        { id: 'box2', src: workImages.box2 },
-        { id: 'box3', src: workImages.box3 },
-        { id: 'box4', src: workImages.box4 },
-        { id: 'box5', src: workImages.box5 },
-        { id: 'box6', src: workImages.box6 },
-        { id: 'box7', src: workImages.box7 },
-      ]
-    },
-    vase: {
-      title: 'In Vase',
-      images: [
-        { id: 'vase1', src: workImages.vase1 },
-        { id: 'vase2', src: workImages.vase2 },
-        { id: 'vase3', src: workImages.vase3 },
-        { id: 'vase4', src: workImages.vase4 },
-        { id: 'vase5', src: workImages.vase5 },
+        { id: 'more1', src: workImages.more1 },
+        { id: 'more2', src: workImages.more2 },
+        { id: 'more3', src: workImages.more3 },
       ]
     },
     sunflowers: {
@@ -170,37 +182,20 @@ const FloristPortfolio = () => {
         { id: 'sunflower3', src: workImages.sunflower3 },
       ]
     },
-    tulips: {
-      title: 'Tulips',
+    gerbera: {
+      title: 'Gerbera',
       images: [
-        { id: 'tulip1', src: workImages.tulip1 },
-        { id: 'tulip2', src: workImages.tulip2 },
-        { id: 'tulip3', src: workImages.tulip3 },
+        { id: 'gerbera1', src: workImages.gerbera1 },
+        { id: 'gerbera2', src: workImages.gerbera2 },
+        { id: 'gerbera3', src: workImages.gerbera3 },
       ]
     },
-    wrapped: {
-      title: 'Wrapped Flowers',
+    funeral: {
+      title: 'Funeral Arrangements',
       images: [
-        { id: 'wrapped1', src: workImages.wrapped1 },
-        { id: 'wrapped2', src: workImages.wrapped2 },
-        { id: 'wrapped3', src: workImages.wrapped3 },
-        { id: 'wrapped4', src: workImages.wrapped4 },
-        { id: 'wrapped5', src: workImages.wrapped5 },
-        { id: 'wrapped6', src: workImages.wrapped6 },
-        { id: 'wrapped7', src: workImages.wrapped7 },
-        { id: 'wrapped8', src: workImages.wrapped8 },
-        { id: 'wrapped9', src: workImages.wrapped9 },
-        { id: 'wrapped10', src: workImages.wrapped10 },
-        { id: 'wrapped11', src: workImages.wrapped11 },
-        { id: 'wrapped12', src: workImages.wrapped12 },
-      ]
-    },
-    more: {
-      title: 'More',
-      images: [
-        { id: 'more1', src: workImages.more1 },
-        { id: 'more2', src: workImages.more2 },
-        { id: 'more3', src: workImages.more3 },
+        { id: 'funeral1', src: workImages.funeral1 },
+        { id: 'funeral2', src: workImages.funeral2 },
+        { id: 'funeral3', src: workImages.funeral3 },
       ]
     }
   };
@@ -389,30 +384,28 @@ const FloristPortfolio = () => {
 
       {/* About Section */}
       <section id="about" className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-serif mb-8 text-center mt-[-2rem]">About Me</h2>
-          <div 
-            className={`bg-white p-8 md:p-12 transform transition-all duration-1000 ${
-              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-            }`}
-          >
-            <div className="space-y-6 text-gray-600">
-              <p className="leading-relaxed text-lg">
-                Hello! I'm <span className="font-semibold text-pink-400">Dominica</span>, and I have 3 years of experience in floristry. 
-                I began in 2021, working for a local flower shop for a year. Then, from February to June 2023, I worked at another one, 
-                and in August of that same year, I decided to open my own flower shop.
-              </p>
-
-              <div className="border-l-4 border-pink-200 pl-6 py-2 bg-pink-50/50 rounded-r-lg">
-                <p className="leading-relaxed italic text-gray-700">
-                  Over the years, I've gained valuable experience working in high-pressure environments, ensuring attention to detail in every project. 
-                  I'm also skilled at interpreting design ideas and recreating them from photos.
-                </p>
-              </div>
-            </div>
-          </div>
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl font-serif mb-8 text-center mt-[-2rem]">About Me</h2>
+    <div className={`bg-white p-8 md:p-12 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+      <div className="space-y-6 text-gray-600">
+        <p className="leading-relaxed text-lg">
+          Hello! I'm <span className="font-semibold text-pink-400">Dominica</span>, and I have 3 years of experience in floristry. 
+          I began in 2021, working for a local flower shop for a year. Then, from February to June 2023, I worked at another one, 
+          and in August of that same year, I decided to open my own flower shop.
+        </p>
+        <div className="border-l-4 border-pink-200 pl-6 py-2 bg-pink-50/50 rounded-r-lg">
+          <p className="leading-relaxed italic text-gray-700">
+            Over the years, I've gained valuable experience working in high-pressure environments, ensuring attention to detail in every project. 
+            I'm also skilled at interpreting design ideas and recreating them from photos.
+          </p>
         </div>
-      </section>
+        <p className="leading-relaxed text-lg">
+          Mi idioma principal es el español y tengo un nivel básico de inglés.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Work Gallery Section */}
       <section id="work" className="py-16 bg-gradient-to-b from-pink-50 via-white to-pink-50">
@@ -476,14 +469,37 @@ const FloristPortfolio = () => {
       </section>
 
       {/* Contact Section */}
+      {/* Contact Section */}
       <section id="contact" className="py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <button className="bg-pink-400 hover:bg-pink-500 text-white text-lg px-12 py-4 
-            rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-            Contact Me
-          </button>
+          <h2 className="text-3xl font-serif mb-12">Get in Touch</h2>
+          <div className="flex flex-col items-center gap-8">
+            <a
+              href="mailto:Dominica.barajas3@gmail.com"
+              className="inline-flex items-center space-x-2 bg-pink-400 hover:bg-pink-500 text-white text-lg px-8 py-3 
+                rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-fit"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Dominica.barajas3@gmail.com</span>
+            </a>
+            
+            <a
+              href="tel:+16623522415"
+              className="inline-flex items-center space-x-2 bg-pink-400 hover:bg-pink-500 text-white text-lg px-8 py-3 
+                rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-fit"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>+1 (682) 352-2415</span>
+            </a>
+          </div>
         </div>
       </section>
+
+
 
       <style>{`
         .hide-scrollbar {
