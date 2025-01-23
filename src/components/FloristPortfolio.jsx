@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Flower2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Importar las imágenes
 import principal1 from '../assets/images/principal1.png';
@@ -138,15 +139,17 @@ const FloristPortfolio = () => {
         }`}>
           {/* Image Gallery - Carousel */}
           <div className="relative mb-16">
-            <div className="w-full h-full max-w-full">
-              <div className="flex transition-transform duration-500 ease-out h-[600px] md:h-[700px]"
-                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+            <div className="w-full h-96 md:h-[32rem] bg-gray-50 rounded-lg overflow-hidden">
+              <div 
+                className="flex transition-transform duration-500 ease-out h-full"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
                 {portfolioItems.map((item, index) => (
                   <div key={item.id} className="w-full flex-shrink-0 h-full">
-                    <div className="relative h-full">
+                    <div className="relative h-full flex items-center justify-center bg-white">
                       <img
                         src={item.image}
-                        className={`w-full h-full object-contain transform transition-opacity duration-500 ${
+                        className={`max-w-full max-h-full object-contain transition-opacity duration-500 ${
                           imagesLoaded[item.id] ? 'opacity-100' : 'opacity-0'
                         }`}
                         loading={index === 0 ? 'eager' : 'lazy'}
@@ -210,7 +213,7 @@ const FloristPortfolio = () => {
       {/* About Section */}
       <section id="about" className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-serif mb-12 text-center">About Me</h2>
+          <h2 className="text-3xl font-serif mb-8 text-center mt-[-2rem]">About Me</h2>
           <div 
             className={`bg-white p-8 md:p-12 transform transition-all duration-1000 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
@@ -233,14 +236,15 @@ const FloristPortfolio = () => {
           </div>
         </div>
 
-        {/* Get Started Button */}
+        {/* My Work Button with Link */}
         <div className="max-w-4xl mx-auto px-4 text-center mt-12">
-          <button 
-            className="bg-pink-200 hover:bg-pink-300 text-gray-800 font-medium px-12 py-3 
+          <Link 
+            to="/work"
+            className="inline-block bg-pink-200 hover:bg-pink-300 text-gray-800 font-medium px-12 py-3 
               rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
           >
             MY WORK
-          </button>
+          </Link>
         </div>
       </section>
 
