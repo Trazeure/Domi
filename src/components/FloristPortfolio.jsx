@@ -67,7 +67,7 @@ const FloristPortfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState({});
-  const [activeSection, setActiveSection] = useState('gerbera');
+  const [activeSection, setActiveSection] = useState('box');
   const [visibleSection, setVisibleSection] = useState(null);
 
   const portfolioItems = [
